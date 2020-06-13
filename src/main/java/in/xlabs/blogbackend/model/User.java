@@ -1,4 +1,6 @@
 package in.xlabs.blogbackend.model;
+import org.springframework.context.annotation.Configuration;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,6 +15,27 @@ public class User {
     private String password;
     @Column
     private String email;
+    @Column
+    private String firstname;
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    @Column
+    private String lastname;
 
     public Long getId() {
         return id;
